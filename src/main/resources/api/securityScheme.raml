@@ -1,0 +1,22 @@
+#%RAML 1.0 SecurityScheme
+type: OAuth 2.0
+description: This API supports OAuth security type
+describedBy:
+  headers:
+    Autentication:
+      description: Please use a valid ClientID and ClientSecret
+      required: false
+  queryParameters:
+    ClientID:
+      type: string
+      required: true
+    ClientSecret:
+      type: integer
+      required: true
+  responses:
+    200:
+      description: Ok
+    401:
+      description: Anauthorized
+    403:
+      description: Forbidden
